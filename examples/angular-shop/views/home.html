@@ -1,0 +1,19 @@
+<div class="row">
+    <h2>{{'products' |translate }}</h2>
+
+    <div class="row">
+          <div class="col-sm-4 col-md-4" ng-repeat="product in products" style="float:left">
+            <div class="thumbnail">
+              <img ng-src="{{ product.image }}">
+              <div class="caption">
+                <h3>{{ product.name }}</h3>
+                <p>
+                    <b>{{ 'price' |translate }}:</b> {{product.price |currency}} <br>
+                    <b>{{ 'updated_at'|translate}}:</b> {{ product.updated_at |date }}
+                </p>
+              </div>
+            </div>
+          </div>
+    </div>
+
+</div>

@@ -1,0 +1,16 @@
+{
+    "buy": "Satın Al",
+    "home": "Anasayfa",
+    "contact": "İletişim",
+    "turkish": "Türkce",
+    "english": "İngilizce",
+    "404_not_found": "Sayfa Bulunamadı",
+    "fullname": "Ad Soyad",
+    "email": "E-Posta",
+    "message": "Mesaj",
+    "send": "Gönder",
+    "message_send_message": "Mesajınız Gonderildi",
+    "products": "Ürünler",
+    "price": "Fiyat",
+    "updated_at": "Guncellenme Tarihi"
+}

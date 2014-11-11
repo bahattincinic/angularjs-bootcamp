@@ -1,0 +1,10 @@
+{
+  "en" : {
+    "APP_TITLE" : "VNGRS AngularJS Bootcamp",
+    "INTRODUCTION_TEXT" : "First angularjs Conference in Istanbul"
+  },
+  "tr" : {
+    "APP_TITLE" : "VNGRS AngularJS Kampı",
+    "INTRODUCTION_TEXT" : "İstanbul'daki ilk AngularJS Konferansı"
+  }
+}

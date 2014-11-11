@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <title>AngularJS Translate</title>
+    <link rel="stylesheet" type="text/css" href="/components/bootstrap/dist/css/bootstrap.css">
+
+    <!-- AngularJs -->
+    <script type="text/javascript" src="/components/angular/angular.js"></script>
+    <!--script type="text/javascript" src="/components/angular-i18n/angular-locale_en-us.js"></script>
+    <script type="text/javascript" src="/components/angular-i18n/angular-locale_tr-tr.js"></script-->
+    <script type="text/javascript" src="/components/angular-resource/angular-resource.js"></script>
+    <script type="text/javascript" src="/components/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="/components/angular-cookies/angular-cookies.js"></script>
+    <!-- Angular-translate -->
+    <script type="text/javascript" src="/components/angular-translate/angular-translate.js"></script>
+    <script type="text/javascript" src="/components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+    <script type="text/javascript" src="/components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script type="text/javascript" src="/components/angular-dynamic-locale/tmhDynamicLocale.min.js"></script>
+    
+    <!-- App -->
+    <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/controller.js"></script>
+    <script type="text/javascript" src="/scripts/service.js"></script>
+</head>
+<body ng-app="angularShop">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#/">AngularJs Bootcamp</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+
+          <!-- Menu -->
+          <ul class="nav navbar-nav">
+            <li class="active">
+                <a href="#/">{{ 'home' |translate }}</a>
+            </li>
+            <li>
+                <a href="#/contact">{{ 'contact' |translate }}</a>
+            </li>
+          </ul>
+
+          <!-- Dil Degisimi -->
+          <ul class="nav navbar-nav navbar-right" ng-controller="langController">
+              <li style="margin-top:9px; margin-right:5px">
+                <button class="btn" ng-click="switchLanguage('tr-tr')">{{ 'turkish' |translate }}</button>
+              </li>
+              <li style="margin-top:9px;">
+                <button ng-click="switchLanguage('en-us')" class="btn">{{ 'english' |translate }}</button>
+              </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="container" style="margin-top:70px">
+        <div ng-view></div>
+    </div>
+
+</body>
+</html>

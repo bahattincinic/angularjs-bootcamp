@@ -1,0 +1,16 @@
+{
+    "buy": "Buy",
+    "home": "Home",
+    "contact": "Contact",
+    "turkish": "Turkish",
+    "english": "English",
+    "404_not_found": "Page Not Found",
+    "fullname": "Full Name",
+    "email": "E-Mail",
+    "message": "Message",
+    "send": "Send",
+    "message_send_message": "Your message was sent",
+    "products": "Products",
+    "price": "Price",
+    "updated_at": "Updated Date"
+}

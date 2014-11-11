@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Apple Kapak",
+        "id":1,
+        "image": "/images/product-1.jpg",
+        "price": "14.90",
+        "updated_at": "1288323623006"
+    },
+    {
+        "name": "Kulakliklar",
+        "id":2,
+        "image": "/images/product-2.jpg",
+        "price": "14.90",
+        "updated_at": "1288323623006"
+    },
+    {
+        "name": "MP3 Calar",
+        "id":3,
+        "image": "/images/product-3.jpg",
+        "price": "14.90",
+        "updated_at": "1288323623006"
+    },
+    {
+        "name": "Kulakliklar",
+        "id":4,
+        "image": "/images/product-4.jpg",
+        "price": "14.90",
+        "updated_at": "1288323623006"
+    },
+    {
+        "name": "Ekmek",
+        "id":5,
+        "image": "/images/product-5.jpg",
+        "price": "14.90",
+        "updated_at": "1288323623006"
+    },
+    {
+        "name": "Kopek",
+        "id":6,
+        "image": "/images/product-6.jpg",
+        "price": "14.90",
+        "updated_at": "1288323623006"
+    },
+    {
+        "name": "Kaplan",
+        "id":7,
+        "image": "/images/product-7.jpg",
+        "price": "14.90",
+        "updated_at": "1288323623006"
+    },
+    {
+        "name": "Dizüstü Bilgisayar",
+        "id":8,
+        "image": "/images/product-8.jpg",
+        "price": "14.90",
+        "updated_at": "1288323623006"
+    },
+    {
+        "name": "Akilli Telefon",
+        "id":9,
+        "image": "/images/product-9.jpg",
+        "price": "14.90",
+        "updated_at": "1288323623006"
+    }
+]

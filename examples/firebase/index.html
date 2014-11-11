@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <title>AngularJS Translate & Firebase</title>
+    <script type="text/javascript" src="components/angular/angular.js"></script>
+    <script type="text/javascript" src="components/angular-cookies/angular-cookies.js"></script>
+    <script type="text/javascript" src="components/angular-translate/angular-translate.js"></script>
+    <script type="text/javascript" src="components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+    <script type="text/javascript" src="components/firebase/firebase.js"></script>
+    <script type="text/javascript" src="components/angularfire/dist/angularfire.js"></script>
+    <script type="text/javascript">
+        var app = angular.module('myApp', ['ngCookies', 'pascalprecht.translate', 'firebase']);
+
+        app.config(['$translateProvider', function ($translateProvider) {
+
+            $translateProvider.preferredLanguage('tr');
+            // loader
+            $translateProvider.useLoader('firebaseLoader');
+            // remember language
+            $translateProvider.useCookieStorage();
+        }]);
+
+        app.factory('firebaseLoader', function ($http, $q, $firebase) {
+            return function (options) {
+                var ref = new Firebase("https://angularjs-bootcamp.firebaseio.com/").child(options.key);
+                var deferred = $q.defer();
+                ref.on('value', function(snapshot){
+                    deferred.resolve(snapshot.val());
+                });
+                return deferred.promise;
+            };
+        });
+
+        app.controller('langController', function ($scope, $translate, $firebase) {
+           $scope.switchLanguage = function (languageKey) {
+             $translate.use(languageKey);
+           };
+        });
+    </script>
+</head>
+<body ng-app="myApp">
+
+    <h1 translate="APP_TITLE"></h1>
+    <p translate="INTRODUCTION_TEXT"></p>
+
+    <ul ng-controller="langController" style="list-style: none;">
+        <li><button ng-click="switchLanguage('tr')" style="float: left; margin-right: 10px">Turkish</button></li>
+        <li><button ng-click="switchLanguage('en')"  style="float: left">English</button></li>
+    </ul>
+
+</body>
+</html>
