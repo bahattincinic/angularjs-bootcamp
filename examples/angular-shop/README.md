@@ -10,7 +10,7 @@ Gereksinimler
 
 Kurulum
 -------------
-1. npm install http-server
+1. npm install http-server -g
 2. bower install
 
 
