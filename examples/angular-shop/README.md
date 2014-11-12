@@ -10,12 +10,12 @@ Gereksinimler
 
 Kurulum
 -------------
-1. npm install
+1. npm install http-server
 2. bower install
 
 
 Örnek Projeyi Çalıştırmak
 --------------------
 ```bash
-node static_server.js
+http-server
 ```

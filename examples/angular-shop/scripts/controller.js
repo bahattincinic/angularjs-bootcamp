@@ -16,7 +16,7 @@ angular.module('angularShop').controller('langController', function ($scope, $tr
 
 angular.module('angularShop').controller('mainController', function($scope, $rootScope, $translate, productService){
     $scope.init = function(){
-        productService.all($translate.use(), function(query){
+        productService.all($translate.use() || 'en-us', function(query){
             $rootScope.products = query;
         });
     };
